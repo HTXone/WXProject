@@ -1,2 +1,3 @@
 # WXProject
-RUA
+Some WXCode
+Some JavaCode
