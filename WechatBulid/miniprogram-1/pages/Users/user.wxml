@@ -1,0 +1,51 @@
+<!--pages/Users/user.wxml-->
+<!-- <view>
+    <button style="position: relative; display: block; box-sizing: border-box; left: 150rpx; top: 8rpx;" size ="mini" bindtap="infoJump">info</button>
+  </view> -->
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">111</text>
+    </block>
+  </view>
+
+
+  <view style="margin-top: 10px;">
+    <view class="A">
+      <text>Uid</text>
+      <input disabled="true" value="{{uid}}"/>
+    </view>
+
+    <view class="A">
+      <text>年龄</text>
+      <input disabled="true" value="{{age}}"/>
+    </view>
+
+    <view class="A">
+      <text>不喜欢</text>
+      <input disabled="true" value="{{comps}}"/>
+    </view>
+
+    <view class="A">
+      <text>喜欢</text>
+      <input disabled="true" value="{{tags}}"/>
+    </view>
+
+    <button style="margin-top: 5%;" type="primary" bindtap="RecommandStart"> 开始推荐 </button>
+
+  </view>
+
+
+</view>

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/goodList/index",
+    "pages/Users/user",
+    "pages/group/group",
+    "pages/recommend/recommend",
+    "pages/recommend/index",
+    "pages/guide/guide_info",
+    "pages/guide/guide_like",
+    "pages/guide/guide_dislike",
+    "pages/guide/guide_food",
+    "pages/Users/remind",
+    "pages/goodList/cart",
+    "pages/group/groupVote",
+    "pages/ItemInfo/ItemInfo",
+    "pages/group/groupCreate",
+    "pages/ItemInfo/test",
+    "pages/group/userinvite"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff0",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#e64340",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/nav/index-off.png",
+        "selectedIconPath": "images/nav/index-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/Users/user",
+        "iconPath": "images/nav/my-off.png",
+        "selectedIconPath": "images/nav/my-on.png",
+        "text": "个人"
+      },
+      {
+        "pagePath": "pages/group/group",
+        "iconPath": "images/friend.png",
+        "selectedIconPath": "images/friend.png",
+        "text": "群组"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,26 @@
+<view style="padding:45px; justify-content: center;">
+  <view class="topTitle">
+    <text style="width: 60%; font-size: x-large;">请选择</text>
+  </view>
+  <view class="usermotto">
+ 
+    <view class="B" >
+    <checkbox-group bindchange="doCheck">
+      <block wx:for="{{Recipes}}" wx:for-item="item" wx:key="{{index}}">
+        <view class="A" style="width: 565rpx; height: 162rpx; display: flex; box-sizing: border-box">
+        <image src="/images/ad.png" class="Timage"  style="position: relative; left: -181rpx; top: 3rpx; width: 202rpx; height: 134rpx; display: block; box-sizing: border-box"></image>
+        <view style="width: 378rpx; height: 94rpx; display: block; position: relative; box-sizing: border-box; left: 139rpx; top: -97rpx">{{item.name}}</view>
+        <checkbox style="position: relative; left: 71rpx; top: -97rpx" value="{{item.pid}}" ></checkbox>
+      </view>
+      </block>
+      
+      
+    </checkbox-group>
+    
+    </view>
+    <!-- <text class="user-motto">{{motto}}</text> -->
+    <view style="width: 556rpx; height: 85rpx; display: block; box-sizing: border-box">
+      <button style="width: 100px; justify-content: flex-end; position: relative; left: 97rpx; top: 0rpx" size="mini" bindtap="Order"> 换一组 </button>
+    </view>    
+  </view>
+</view>

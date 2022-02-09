@@ -1,0 +1,13 @@
+<!--pages/Users/remind.wxml-->
+<view class="topTitle">
+  <text style="width: 60%; font-size: x-large;">新的消息</text>
+</view>
+
+<view>
+  <block wx:for="{{content}}" wx:for-item="item" wx:key="{{index}}">
+      <view class="middleFormItems" >
+          <text style="width: 100px; margin-top: 10px;margin-left: 10px;display: inline-block;">{{item.name}}</text>
+          <button  size="mini" style="display: inline-block;margin-top: 2px;" bindtap="goRecommend" data-gid="{{item.gid}}">go</button>
+      </view>
+  </block>
+</view>

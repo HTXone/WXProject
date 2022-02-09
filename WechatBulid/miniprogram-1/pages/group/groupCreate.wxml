@@ -1,0 +1,25 @@
+<!--pages/group/groupCreate.wxml-->
+<view>
+  <view class="topTitle" style="height: 134rpx; display: flex; box-sizing: border-box">
+    <text style="width: 60%; font-size: x-large;">请输入基本信息:</text>
+  </view>
+  <view class="middleForm">
+    <view class="middleFormItems">名称：
+    <view style="border: 3rpx solid #000;height: 40px;width: 200px;">
+      <input placeholder="群组名称" bindinput="UNameChange" value="{{UName}}" />
+    </view>
+    </view>
+    <view class="middleFormItems">关系：
+    <picker-view class="picker_view" value="{{value}}" indicator-style="height:25px" bindchange="AgeChange">
+      <picker-view-column >
+        <view class="col" wx:for ="{{relationships}}" wx:for-item="item" wx:key="s{{index}}" >{{item.title}}</view>
+      </picker-view-column>
+    </picker-view>
+    </view>
+
+  </view>
+  <view>
+    <button bindtap="nextPage" style="position: relative; top: 155rpx;">完成</button>
+  </view>
+
+</view>

@@ -1,0 +1,99 @@
+page {
+  background: #f5f5f5;
+}
+
+/*总体主盒子*/
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+/*左侧栏主盒子*/
+
+.nav_left {
+  /*设置行内块级元素（没使用定位）*/
+  position: absolute;
+  display: inline-block;
+  width: 35%;
+  height: 85%;
+  /*主盒子设置背景色为灰色*/
+  background: #f5f5f5;
+  text-align: center;
+  overflow: scroll;
+}
+
+/*左侧栏list的item*/
+
+.nav_left .nav_left_items {
+  /*每个高30px*/
+  height: 30px;
+  /*垂直居中*/
+  line-height: 30px;
+  /*再设上下padding增加高度，总高42px*/
+  padding: 6px 0;
+  /*只设下边线*/
+  border-bottom: 1px solid #dedede;
+  /*文字14px*/
+  font-size: 20px;
+}
+
+/*左侧栏list的item被选中时*/
+
+.nav_left .nav_left_items.active {
+  /*背景色变成白色*/
+  background: #fff;
+  color: red;
+}
+
+/*右侧栏主盒子*/
+
+.nav_right {
+  /*右侧盒子使用了绝对定位*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  flex: 1;
+  /*宽度75%，高度占满，并使用百分比布局*/
+  width: 65%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;
+  overflow: scroll;
+}
+
+.nav_right .nav_right_items {
+}
+
+.nav_right .nav_right_items text {
+  /*给text设成块级元素*/
+  display: block;
+  margin-bottom: 25px;
+  font-size: 20px;
+  /*设置文字居中*/
+  text-align: left;
+  /*设置文字溢出部分为...*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.A{
+  flex-direction: row;
+  padding: 1px;
+  border: 1px solid rgb(223, 222, 222);
+  margin-top: 3px;
+  display: flex;
+  height: 50px;
+}
+
+.setting {
+  position: fixed;
+  color: rgb(23, 163, 163);
+  background-color: #fff;
+  left: 261rpx; top: -3rpx; width: 65%; height: 90rpx;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  }

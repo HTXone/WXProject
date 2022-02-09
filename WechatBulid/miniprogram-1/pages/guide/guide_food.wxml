@@ -1,0 +1,19 @@
+<!--pages/guide/guide_dislike.wxml-->
+
+<view>
+  <view class="topTitle">
+    <text class="titleFont">推荐的食材</text>
+  </view>
+  <view class="middleForm">
+    <block wx:for="{{content}}" wx:for-item="item" wx:key="{{index}}">
+      <view class="middleFormItems {{item.chooseed > 0 ? (item.chooseed ==1 ? 'active' : 'bad') : ''}}" bindtap="chooseItem" data-id="{{index}}">
+          {{item.name}}
+      </view>
+    </block>
+  </view>
+  <view class="bottomButton">
+    <button>换一组</button>
+    <button bindtap="nextPage">查看结果</button>
+  </view>
+
+</view>

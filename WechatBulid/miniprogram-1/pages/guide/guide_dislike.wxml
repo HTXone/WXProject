@@ -1,0 +1,19 @@
+<!--pages/guide/guide_dislike.wxml-->
+
+<view>
+  <view class="topTitle">
+    <text class="titleFont">选择讨厌的类型</text>
+  </view>
+  <view class="middleForm">
+    <block wx:for="{{content}}" wx:for-item="item" wx:key="{{index}}">
+      <view class="middleFormItems {{item.chooseed == true ? 'active' : ''}}" bindtap="chooseItem" data-id="{{index}}">
+          {{item.name}}
+      </view>
+    </block>
+  </view>
+  <view class="bottomButton">
+    <button>换一组</button>
+    <button bindtap="nextPage">下一项</button>
+  </view>
+
+</view>

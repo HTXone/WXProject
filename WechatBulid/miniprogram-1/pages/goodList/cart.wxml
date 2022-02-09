@@ -1,0 +1,17 @@
+<!--pages/goodList/cart.wxml-->
+<view class="topTitle">
+  <text style="width: 60%; font-size: x-large;">已选择</text>
+</view>
+
+<view>
+  <block wx:for="{{title}}" wx:for-item="item" wx:key="{{index}}">
+    <view class="middleFormItems" >
+          <text style="width: 100px; margin-top: 10px;margin-left: 10px;margin-right: 100px; display: inline-block;">{{item.name}}</text>
+          <button  size="mini" style="position: relative; display: inline-block;" bindtap="itemOperate" data-pid="{{item.pid}}">...</button>
+          
+      </view>
+  </block>
+</view>
+<view>
+  <button type="primary" style="margin-top: 20%; position: static; " bindtap="recommendItem">确定</button>
+</view>

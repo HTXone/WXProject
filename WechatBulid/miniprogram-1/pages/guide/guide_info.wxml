@@ -1,0 +1,35 @@
+<!--pages/guide/guide_info.wxml-->
+
+<view>
+  <view class="topTitle" style="height: 134rpx; display: flex; box-sizing: border-box">
+    <text style="width: 60%; font-size: x-large;">请输入基本信息:</text>
+  </view>
+  <view class="middleForm">
+    <view class="middleFormItems">昵称：
+    <view style="border: 3rpx solid #000;height: 40px;width: 200px;">
+      <input placeholder="群组中显示该昵称" bindinput="UNameChange" value="{{UName}}" />
+    </view>
+    </view>
+    <view class="middleFormItems">年龄：
+    <picker-view class="picker_view" value="{{value}}" indicator-style="height:25px" bindchange="AgeChange">
+      <picker-view-column >
+        <view class="col" wx:for ="{{age}}" wx:for-item="item" wx:key="s{{index}}" >{{item.title}}</view>
+      </picker-view-column>
+    </picker-view>
+    </view>
+
+    <view class="middleFormItems"  style="width: 418rpx; height: 108rpx; display: block; box-sizing: border-box">
+    性别：
+      <radio-group style="margin-top: 10px;flex-direction: row; align-items: center; display: flex;"
+      bindchange="GenderChange">
+        <radio value="male">男</radio>
+        <radio value="female" style="position: relative; left: 40%;">女</radio>
+      </radio-group>
+    </view>
+  </view>
+  <view>
+    <button bindtap="nextPage" style="position: relative; top: 155rpx;">下一项</button>
+  </view>
+
+</view>
+

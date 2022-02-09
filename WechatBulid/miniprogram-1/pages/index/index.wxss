@@ -1,0 +1,68 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.A {
+  flex-direction: row;
+  justify-content: center;
+  width: max-content;
+  height: 120px;
+  flex-wrap: wrap;
+}
+
+.Timage{
+  width: 80px;
+  height: 80px;
+}
+
+.Tbutton{
+  width: 100px;
+}
+
+.Tbutton2 {
+  width: 100px;
+  justify-content:flex-end;
+}
+
+.B{
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+.box{
+  height:150rpx;
+  margin-bottom: 32rpx;
+}
+
+.box1{
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+.box1 .box-1{
+  height: 100%;
+  overflow-y: scroll;
+  width: 200rpx;
+}
+
+.box1 .box-2{
+  height: 100%;
+  overflow-y: scroll;
+  width: 550rpx;
+}

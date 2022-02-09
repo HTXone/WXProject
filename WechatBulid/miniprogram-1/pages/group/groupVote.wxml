@@ -1,0 +1,20 @@
+<!--pages/group/groupVote.wxml-->
+<view>
+  <view class="topTitle">
+    <text style="width: 60%; font-size: x-large;">{{gName}}</text>
+    <view style="font-size:smaller; color :rgb(103, 230, 230);margin-top: 0px; position: relative; top: -15rpx;"> number ：{{gNumber}}</view>
+    <button wx:if="{{ifAdmin}}" style="position: absolute; right: 5%; top: 9rpx;  height: 94rpx; display: block; box-sizing: border-box" bindtap="infoJump" size="mini">新的推荐</button>
+  </view>
+  <view>
+    <block wx:for="{{content}}" wx:for-item="item" wx:key="{{index}}">
+      <view class="middleFormItems" style="width:722rpx; height:188rpx; display: flex; box-sizing: border-box">
+        <view style="flex-direction: row; display: flex; width: 100%;">
+          <text style="display: inline-block; font-size: x-large;">{{item.pname}}</text>
+          <button size="mini" style="width: 90rpx; display: inline-block; position: relative; left: 20%;" bindtap="itemOperate" data-id="{{index}}">...</button>
+        </view>
+        <view style="font-size:smaller; color :rgb(103, 230, 230);margin-top: 20px; position: relative; top: -15rpx;"> agree ：{{item.agreeUsers}}, disagree ：{{item.disagreeUsers}}</view>
+      </view>
+    </block>
+  </view>
+  
+</view>

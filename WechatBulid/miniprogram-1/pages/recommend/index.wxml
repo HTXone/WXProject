@@ -1,0 +1,13 @@
+<!--pages/recommend/index.wxml-->
+<view >
+  <view class="topTitle">
+    <text style="width: 60%; font-size: x-large;">开始新一轮推荐</text>
+  </view>
+
+  <button style="margin-top: 55%;" type="primary" bindtap="RecommandStart"> 开始 </button>
+  
+</view>
+
+
+
+

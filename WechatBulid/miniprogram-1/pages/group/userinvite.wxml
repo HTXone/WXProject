@@ -1,0 +1,17 @@
+<!--pages/group/groupCreate.wxml-->
+<view>
+  <view class="topTitle" style="height: 134rpx; display: flex; box-sizing: border-box">
+    <text style="width: 60%; font-size: x-large;">请输入基本信息:</text>
+  </view>
+  <view class="middleForm">
+    <view class="middleFormItems">Uid：
+    <view style="border: 3rpx solid #000;height: 40px;width: 200px;">
+      <input placeholder="Uid" bindinput="UNameChange" value="{{UName}}" />
+    </view>
+    </view>
+  </view>
+  <view>
+    <button bindtap="nextPage" style="position: relative; top: 155rpx;">完成</button>
+  </view>
+
+</view>

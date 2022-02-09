@@ -1,0 +1,51 @@
+
+<view class="page_row">
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input class="" placeholder="请输入关键字" value="{{searchValue}}"/>
+      </view>
+    </view>
+    <button class='sousuo' size="mini">搜索</button>
+  </view>
+<view style="width: 750rpx; height: 101rpx; display: block; box-sizing: border-box;flex-direction: row;display: flex; ">
+  <text style="margin-top: 4px; margin-left: 4px; width: 331rpx; height: 101rpx; font-size: x-large; display: block; box-sizing: border-box">{{title[curNav].name}}</text>
+  <button class="caft" bindtap="goCart" size="mini">购物车</button>
+</view>
+<!--主盒子-->
+<view class="container">
+    <!--左侧栏-->
+    <view class="nav_left">
+        <block wx:for="{{title}}" wx:for-item="item" wx:key="{{index}}">
+            <!--  {{curNav == item.id ? 'active' : ''}} -->
+            <!-- 三目运算符是用来给当前选中的目录修改样式用的 -->
+            <!-- switchRightTab 函数是用来实现数据的渲染 -->
+            <!-- 当用户点击道不同的侧边栏目录时候，根据 data-id 去从数据库获取新的数据，渲染到左侧，并且修改 curNav 的值，使新样式添加到点击的目录上，具体 js 自己实现 -->
+            <view class="nav_left_items {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-id="{{item.id}}">{{item.name}}</view>
+        </block>
+    </view>
+
+    <!--右侧栏-->
+    <view class="nav_right">
+        <view class="nav_right_items">
+            <block wx:for="{{content}}" wx:for-item="item" wx:key="{{index}}">
+                <view class="A">
+                    <text style="width: 100px; display: inline-block; margin-top: 2px;" bindtap="showPopup">{{item.name}}</text>
+                    <checkbox-group style="display: inline-block; position: relative; left: 30%; margin-top: 4px" bindchange="checkItems" data-gid="{{index}}">
+                    <checkbox checked="{{caft[item.pid]}}"></checkbox> 
+                    </checkbox-group>
+                    
+                </view>
+            </block>
+        </view>
+    </view>
+</view>
+
+<!-- <popup id='popup' 
+  title='小组件' 
+  content='学会了吗' 
+  btn_no='没有' 
+  btn_ok='学会了'
+  bind:error="_error"  
+  bind:success="_success">
+</popup> -->

@@ -1,0 +1,83 @@
+/* pages/guide/guide_like.wxss */
+/* pages/guide/guide_like.wxss */
+
+.topTitle{
+  width: 100%;
+  height: 100px;
+  margin-top: 10%;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  
+}
+
+.titleFont{
+  width: 60%;
+  font-size: x-large;
+}
+
+.middleForm{
+  width: 90%;
+  margin-left: 5%;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row;flex-wrap: wrap; display: flex;
+}
+
+.middleFormItems{
+  margin-top: 0%; 
+  margin-right: 1px;
+  margin-bottom: 1px;
+  padding: 3px;
+  border: 5px solid rgba(206, 212, 240, 0.199);
+  background-color: rgba(214, 217, 219, 0.699);
+  color: rgb(24, 54, 70);
+  width: 150rpx; 
+  height: 100rpx; 
+  display: block; 
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+}
+
+.middleFormItems.active{
+  margin-top: 0%; 
+  margin-right: 1px;
+  margin-bottom: 1px;
+  border: 5px solid rgba(152, 247, 168, 0.514);
+  width: 150rpx; 
+  height: 100rpx; 
+  display: block; 
+  box-sizing: border-box;
+  background: #fff;
+  color: green;
+  
+  align-items: center;
+  display: flex;
+}
+
+.bottomButton{
+  position:absolute;
+  align-self: center;
+  flex-direction: column;
+  display: flex;
+  top:80%;
+  width: 60%;
+  left:20%;
+}
+
+.middleFormItems.bad{
+  margin-top: 0%; 
+  margin-right: 1px;
+  margin-bottom: 1px;
+  border: 5px solid rgba(247, 174, 152, 0.514);
+  width: 150rpx; 
+  height: 100rpx; 
+  display: block; 
+  box-sizing: border-box;
+  background: rgb(221, 174, 174);
+  color: rgb(128, 15, 0);
+  
+  align-items: center;
+  display: flex;
+}
